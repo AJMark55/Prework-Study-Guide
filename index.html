@@ -11,6 +11,7 @@
     <header id="header">
       <h1>Prework Study Guide</h1>
       <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." />
+      <h2>✨ Open the Console to See What's Happening ✨</h2>
     </header>
     <main>
       
@@ -26,12 +27,12 @@
     <li>rel attribute specifies the relationship between the current doc. and the linked document source</li>
     <li>href attribute specifies the location URL of the external resource. The href attribute is using a relative path.</li>
   </ul>
-  </section>
-  <section class="card" id="card" id="css-section">
-    <h2>CSS</h2>
+
+<section class="card" id="card" id="css-section">
+  <h2>CSS</h2>
     <h3>Three ways to style a webpage using CSS: inline CSS, internal CSS style sheet, and external CSS style sheet.</h3>
     <ul>
-      <li>Internal style sheet contain CSS rules for the webpage in the head section of the HTML file. The rules only apply to that page, 
+    <li>Internal style sheet contain CSS rules for the webpage in the head section of the HTML file. The rules only apply to that page, 
         and you can configure CSS classes and IDs, which are used to identify elements, to style multiple elements in the page code.
          Again, a single change to the CSS rule will apply to all tagged page elements.</li>
     <li> inline CSS. Inline styles apply to a specific HTML tag, using a style attribute with a CSS rule to style a particular page element only.</li>
@@ -40,7 +41,7 @@
       <li>box-shadow adds shadow effects around an element's frame. You can set multiple effects separated by commas. 
         A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color. 
         In our example, the X offset is 5px and defines the width or extent of the shadow on the X axis (or to the right of the box); the Y offset is 10px and defines the extent on the Y axis (or just below the box).</li>   
-  </ul>
+    </ul>
   <p>Separation of concerns is a widely used term in web development and refers to separating code into different files based on use.
     Declarations contain two important components: the CSS property we want to apply and the value of the property
   </p>
@@ -74,13 +75,85 @@
 </section>
 <section class="card" id="javascript-section">
   <h2>JavaScript</h2>
+  <p>JavaScript (JS) is a high-level dynamic programming language that allows users to interact with websites.
+     Using JavaScript, you can power your websites with effects, interactivity, data communication, and much more.
+     If the JavaScript loads first and it is supposed to affect the HTML that hasn't loaded yet, there could be problems. Placing JavaScript near the bottom of an HTML page is one way to accommodate this dependency.</p>
+     <ul>
+    <li>Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have.
+       These can be used to build other data structures.</li>
+    <li>JavaScript is a dynamic language with dynamic types. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types</li>
+    <li>Variables are containers that store values. You start by declaring a variable with the let keyword, followed by the name you give to the variable</li>
+    <li>A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement.</li>
+    <li>JavaScript is case sensitive. This means myVariable is not the same as myvariable. If you have problems in your code, check the case!</li>
+    <li>console.log(): method was created to make it easier for developers to test their code. Developers use it daily to debug and test the code that they write.</li>
+    </ul>
+  <h3>Data types</h3>
   <ul>
-    <li>Enter JavaScript notes here</li>
+    <li>String: is a sequence of text known as a string. To signify that the value is a string, enclose it in single quote marks.</li>
+    <li>Number: This is a number. Numbers don't have quotes around them.</li>
+    <li>Boolean: This is a True/False value. The words true and false are special keywords that don't need quote marks.</li>
+    <li>Array: This is a structure that allows you to store multiple values in a single reference.	</li>
+    <li>Object: This can be anything. Everything in JavaScript is an object and can be stored in a variable. Keep this in mind as you learn.	</li>
   </ul>
-</section>
+  <h3>Conditional Logic</h3>
+  <ul>
+    <li>Control Flow: Refers to the order a computer executes code based on our instructions, applies to other languages as well.</li>
+    <li>if statements: checks whether a condition evaluates to be true or false. Action there after is depndant on this answer.</li>
+    <li>JavaScript is read from top to bottom, and order counts. This means that we must be intentional about how we set up code in a JS file; we can’t just throw it all in there any which way!</li>
+    <li>Control flow can be interrupted, however. We can use conditional statements and loops to control the order in which code is executed, or if it is even executed at all.</li>
+    <li>When the computer encounters an if statement in a JavaScript file, it will check to see if the condition that we provide is truthy. If it is, then it will do whatever action we ask it to do in between the curly brackets.
+       If the condition isn’t true or has a value that isn’t truthy, then the computer will ignore whatever is in between the curly brackets and move on.</li>
+    <li> The strict equality operator (===) checks to see if two values are equal, and returns a Boolean result true if the values are equal and false if the values are not equal.</li>
+    </ul>
+    <p>
+      When creating an if statement, we provide one or more conditions for the computer to evaluate. If one condition is truthy, the computer will execute the code that we provide between curly brackets. 
+      But if the condition is not truthy, the code will not execute, interrupting the control flow. Interrupting the control flow in this way allows us to build apps that respond to a user's actions.
+    </p>
+  
+  <h3>Arrays</h3>
+  <ul>
+    <li>Arrays allow storing multiple items under a single variable name</li>
+    <li>(Example) var shapes = ["triangle", "square", "pentagon", "circle"];</li>
+    <li>Arrays are especially useful when we want to perform a task on multiple pieces of data at once.</li>
+    <li>Arrays are not limited to contain only a single type of data. A single array can store different types of data, such as strings, numbers, and so on.</li>
+    <li>Array Index: the location of the data item in the array. This location is identified with a unique number called an index. </li>
+    <li>If we wanted to access only the triangle, we start with the name of the variable that stores the array, which in our case is shapes.
+       Then we add the index of triangle to the end of the array name in square brackets, as shown in the following line of code:shapes[0];</li>
+  </ul>
+  <h3>Loops</h3>
+  <p>A for loop uses the predictable pattern of indices to perform a task on all the items in an array by allowing a single code block to be executed over and over.
+    By using a for loop, we can tell the computer to go through each of the shapes in our array and log them to the console until there are no shapes left. In order to use the for loop, we need the shape's index and the array's length.
+  </p>
+  <div></div>
+  <p>A for loop contains the following three important statements:</p>
+  <ul>
+    <li>The first statement determines the starting point for our loop. Since we want to start at the beginning of the array, we declare a variable x and give it a value of 0. var x = 0;
+)    </li>
+    <li>The second statement is the condition. As long as the number in the variable x is less than the length of the array, the loop will keep running. This will allow the loop to execute one time for each item in the array.
+       We use the length built-in array property on our shapes array to express that condition. x < shapes.length; </li>
+    <li>The final statement is what allows the array to iterate over each item. Since indices follow a predictable pattern, we know the number increases by 1 each time. 
+      The code x++ is a shortcut way of writing x+1. Now every time the code loops, x will increase by 1. x++</li>
+  </ul>.
+  <p>A for loop starts with—you guessed it—for. So far, our for loop looks like the following code:</p>
+  <ul>
+    <li>var topics = ['HTML', 'CSS', 'Git', 'JavaScript'];
+    {</li>
+    <li>for (var x = 0; x < topics.length; x++) {</li>
+    <li>console.log(topics[x]);</li>
+    <li>}</li>
+  </ul>
+  <p>for (var x = 0; x < shapes.length; x++) {
+    console.log(shapes[x]);
+   }. Finally, we put the code that we want to be executed for each loop inside curly brackets. In our case, we want each of the items in the shapes array to be logged in the console.
+    In place of an actual index number, however, we can add the variable x from our for loop. Now, each time the code runs, x will increase by 1 and the next array item will log to the console. </p>
+
+  </section>
+    
 </section>
     <footer>
       <p>I can code!</p>
     </footer>
+  <script src="./assets/script.js"></script>
+
   </body>
 </html>
