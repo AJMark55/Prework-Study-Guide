@@ -1,2 +1,2 @@
 # Prework-Study-Guide
-A place to vomit code
+A place to review and study prework
